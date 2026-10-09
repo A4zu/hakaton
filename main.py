@@ -6,8 +6,10 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from . import benchmarks, engine, llm
-from .excel_parser import parse_csv, parse_excel
+import benchmarks
+import engine
+import llm
+from excel_parser import parse_csv, parse_excel
 
 app = FastAPI(title="Investor AI")
 
