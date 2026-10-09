@@ -92,4 +92,4 @@ def chat(req: ChatReq):
     return {"reply": llm.chat(req.message, req.history, req.context)}
 
 
-app.mount("/", StaticFiles(directory=Path(__file__).parent.parent / "frontend", html=True), name="ui")
+app.mount("/", StaticFiles(directory=Path(__file__).parent, html=True), name="ui")
